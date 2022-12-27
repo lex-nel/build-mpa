@@ -1,0 +1,17 @@
+{% layout 'layout' %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/assets/css/contacts.css" />
+{% endblock %}
+
+{% block content %}
+  <div class="contacts">
+    <h1>Contacts!</h1>
+  </div>
+
+  {% include 'card.html', name: 'LEx!!!' %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="/assets/js/contacts.js"></script>
+{% endblock %}
