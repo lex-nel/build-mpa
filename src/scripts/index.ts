@@ -1,5 +1,3 @@
-import log from "./components/card";
+import log from './utils/log'
 
-log();
-
-console.log("index");
+log('Index file')

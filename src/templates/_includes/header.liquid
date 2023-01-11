@@ -1,1 +1,140 @@
-<header>Header</header>
+<header class="header">
+  <div class="header__wrapper container grid">
+    <div class="winter" style="pointer-events: none">
+      <svg
+        width="20"
+        height="20"
+        viewbox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="11.5" cy="9.5" r="8.5" fill="#DBF0FF"></circle>
+        <path d="M8.5 3V18" stroke="#242424" stroke-linecap="round"></path>
+        <path
+          d="M16 10.5L1 10.5"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M6.625 3.625L8.5 5.5L10.375 3.625"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M15.3748 8.625L13.4998 10.5L15.3748 12.375"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M6.625 17.375L8.5 15.5L10.375 17.375"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M1.62524 8.625L3.50024 10.5L1.62524 12.375"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M13.8032 15.8037L3.19662 5.19711"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M14.6873 14.0352L12.0356 14.0352L12.0356 16.6868"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M4.96411 4.31348L4.96411 6.96513L2.31246 6.96513"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M13.8032 5.19629L3.19662 15.8029"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M12.0349 4.31348L12.0349 6.96513H14.6866"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M2.31274 14.0352L4.96439 14.0352V16.6868"
+          stroke="#242424"
+          stroke-linecap="round"
+        ></path></svg
+      ><a
+        class="link link--color-cyan link--border-solid"
+        href="#"
+        title="title"
+        >ЯРОВОЕ зимой</a
+      >
+    </div>
+    <div class="wethers">
+      <img class="image" src="/assets/images/cloud.svg" alt="cloud" />
+      <div>Погода +21°C</div>
+    </div>
+    <div class="call-center">
+      <div>Колл-центр пн-сб: с 10:00 - 17:30</div>
+      <div class="ml-8">+7 (900) 000-00-00</div>
+    </div>
+  </div>
+  <div class="header__wrapper container grid">
+    <a class="logo" href="/index.html"></a>
+    <div class="burger js-burger"></div>
+    <nav class="header-nav js-header-nav">
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link active" href="/afisha.html"
+            ><span data-hover="АФИША">АФИША</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/restaurants.html"
+            ><span data-hover="ЕДА">ЕДА</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/apartments.html"
+            ><span data-hover="ПРОЖИВАНИЕ">ПРОЖИВАНИЕ</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/relaxations.html"
+            ><span data-hover="ОТДЫХ">ОТДЫХ</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/pier-card.html"
+            ><span data-hover="КАРТА ПРИЧАЛ">КАРТА ПРИЧАЛ</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/about.html"
+            ><span data-hover="О НАС">О НАС</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/vacancies.html"
+            ><span data-hover="ВАКАНСИИ">ВАКАНСИИ</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="/contacts.html"
+            ><span data-hover="КОНТАКТЫ">КОНТАКТЫ</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="header-search">
+      <a class="button button-icon" href="/search.html"
+        ><img class="icon" src="/assets/images/search.svg" alt=""
+      /></a>
+    </div>
+    <div class="header-login">
+      <w-account-button :is-auth-prop="false"></w-account-button>
+    </div>
+  </div>
+</header>

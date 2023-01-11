@@ -1,0 +1,27 @@
+.breadcrumbs {
+  flex-wrap: wrap;
+  grid-column: 1/-1;
+  position: relative;
+  z-index: 1;
+
+  @apply flex flex-row items-start justify-center;
+
+  * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+
+    &:last-child {
+      color: #9ea8c5;
+      cursor: auto;
+      pointer-events: none;
+    }
+  }
+}

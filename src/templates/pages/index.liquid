@@ -1,11 +1,17 @@
 {% layout 'layout' %}
 
-{% block content %}
-  <div class="home">
-    <h1 class="text-blue-400">Main</h1>
-  </div>
-
-  {% include 'card.html', name: 'LEx!!!' %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/css/home.css" />
 {% endblock %}
 
-{% include 'card.html', name: 'LEx!!!' %}
+{% block content %}
+  <div class="home">
+    <h1 class="text-orange-400">Main</h1>
+  </div>
+
+  {% include 'card', name: 'LEx!!!' %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="/assets/js/home.js"></script>
+{% endblock %}
