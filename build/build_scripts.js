@@ -29,4 +29,6 @@ module.exports = function () {
       treeShaking: true,
     });
   });
+
+  return Promise.resolve();
 };

@@ -4,11 +4,12 @@ const path = require("path");
 const postcss = require("postcss");
 const postcssImport = require("postcss-import");
 const autoprefixer = require("autoprefixer");
+const postcssNested = require("postcss-nested");
 const tailwindcss = require("tailwindcss");
 
 module.exports = function () {
   fs.readFile("src/styles/index.pcss", (err, css) => {
-    postcss([postcssImport, autoprefixer, tailwindcss])
+    postcss([postcssImport, postcssNested, autoprefixer, tailwindcss])
       .process(css, {
         from: "src/styles/index.pcss",
         to: "dist/assets/css/index.css",
@@ -38,7 +39,7 @@ module.exports = function () {
       const fileName = path.parse(file).name;
 
       fs.readFile(entryPath + file, (err, css) => {
-        postcss([postcssImport, autoprefixer, tailwindcss])
+        postcss([postcssImport, postcssNested, autoprefixer, tailwindcss])
           .process(css, {
             from: entryPath + file,
             to: `${outPath}${fileName}.css`,
@@ -57,4 +58,6 @@ module.exports = function () {
       });
     });
   });
+
+  return Promise.resolve();
 };
