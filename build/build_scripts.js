@@ -4,9 +4,12 @@ const path = require('path')
 const esbuild = require('esbuild')
 
 module.exports = function () {
+  // Получение пути от куда брать скрипты
   const entryPath = path.join(__dirname, '../src/scripts/')
+  // Получение пути куда класть скрипты
   const outPath = path.join(__dirname, '../dist/assets/js/')
 
+  // Проверка существования папки куда класть скрипты
   if (!fs.existsSync(outPath)) {
     fs.mkdirSync(outPath, { recursive: true })
   }
@@ -36,7 +39,6 @@ module.exports = function () {
       minify: true,
       format: 'iife',
       target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
-      watch: true,
       logLevel: 'info',
       treeShaking: true,
     })
