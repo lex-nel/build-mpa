@@ -1,5 +1,6 @@
-const chokidar = require('chokidar')
+const fs = require('fs')
 const path = require('path')
+const chokidar = require('chokidar')
 
 const bs = require('browser-sync').create()
 
@@ -14,6 +15,8 @@ const entryPath = path.join(__dirname, '../src/')
 const outPath = path.join(__dirname, '../dist/')
 
 bs.init({
+  open: false,
+  port: 3000,
   server: {
     baseDir: outPath,
     index: 'home.html',
@@ -22,7 +25,18 @@ bs.init({
     },
   },
 
-  port: 3000,
+  middleware: [
+    function (req, res, next) {
+      if (/\/catalog\/\d/.test(req.url)) {
+        const body = fs.readFileSync(`${outPath}product.html`, (err, body) => {
+          return body
+        })
+        res.end(body)
+      }
+
+      next()
+    },
+  ],
 })
 
 // Запуск сборки при первом запуске

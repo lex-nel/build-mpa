@@ -19,7 +19,9 @@ module.exports = function () {
       path.resolve(__dirname, '../src/templates/pages'),
     ],
     extname: '.liquid',
+    cache: true,
   })
+  engine.registerFilter('jsonToObject', json => JSON.parse(json))
 
   fs.readdir(entryPath, (err, files) => {
     files.forEach(file => {
