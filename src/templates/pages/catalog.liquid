@@ -1,0 +1,30 @@
+{% layout 'layout' %}
+
+{% block styles %}
+  <link rel="stylesheet" href="/assets/css/catalog.css" />
+{% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    <h1>Каталог</h1>
+
+    <div class="products">
+      {% capture products_json %}
+        [
+        {"id": 1, "title": "Продукт 1"},
+        {"id": 2, "title": "Продукт 2"},
+        {"id": 3, "title": "Продукт 3"}
+        ]
+      {% endcapture %}
+      {% assign products = products_json | jsonToObject %}
+      {% for product in products %}
+        {% include 'cards/card-product', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/assets/js/catalog.js"></script>
+{% endblock %}

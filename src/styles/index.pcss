@@ -1,11 +1,8 @@
 @import url('tailwindcss.css');
 @import url('utils/variables.pcss');
 @import url('components/header.pcss');
-@import url('components/menu.pcss');
-@import url('components/breadcrumbs.pcss');
-@import url('components/filter.pcss');
-@import url('components/link.pcss');
-@import url('components/card.pcss');
+@import url('components/footer.pcss');
+@import url('components/cards/index.pcss');
 
 @layer utilities {
   .change {
@@ -13,7 +10,32 @@
   }
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  @apply m-0 p-0;
+  @apply m-0 p-0 h-full;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    hsl(154deg 100% 76% / 100%) 0%,
+    hsl(234deg 100% 83% / 100%) 50%,
+    hsl(288deg 100% 81% / 100%) 100%
+  );
+
+  @apply flex flex-col;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  margin: 0 auto;
 }

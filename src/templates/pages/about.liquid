@@ -1,118 +1,15 @@
 {% layout 'layout' %}
 
 {% block styles %}
-<link rel="stylesheet" href="/assets/css/about.css" />
+  <link rel="stylesheet" href="/assets/css/about.css" />
 {% endblock %}
 
 {% block content %}
-<div class="layout-wrapper">
-  <div class="layout-wrapper__content">
-    <div class="about container">
-      <div class="spacer-60"></div>
-      <div class="breadcrumbs"><a href="/"><span>Главная</span></a><svg xmlns="http://www.w3.org/2000/svg" width="19"
-          height="4" viewbox="0 0 19 4" fill="none">
-          <path
-            d="M0 1C1.73507 1 2.60261 3 4.33769 3C6.07276 3 7.51866 1 9.25373 1C10.9888 1 12.1455 3 13.5914 3C15.0373 3 16.4832 1 18.2183 1"
-            stroke="#00AFD6" stroke-opacity="0.5"></path>
-        </svg><a href="/about.html"><span>О нас</span></a></div>
-      <div class="spacer-30"></div>
-      <div class="heading heading_size-h1 heading_color--primary"><span>О нас</span></div>
-      <div class="filter-wrapper mb-40">
-        <div class="filter-wrapper__list"><a class="link link--color-cyan border-wave" href="/">Новости и акции</a><a
-            class="link link--color-cyan border-wave" href="/">Карта курорта</a><a
-            class="link link--color-cyan border-wave" href="/">Отзывы</a><a class="link link--color-cyan border-wave"
-            href="/">Как добраться</a><a class="link link--color-cyan border-wave" href="/">Цены</a></div>
-      </div>
-      <div class="grid">
-        <section class="about__description">
-          <div class="paragraph paragraph_size-md paragraph_color--main"><span>Озеро Большое Яровое – целебный природный
-              ресурс, глубочайшее в Кулундинской степи, самая низкая точка Алтайского края. Площадь озера около 70 км2,
-              а максимальная глубина – 10,5 м. Пляжная полоса полностью покрыта чистым песком золотистого оттенка и
-              имеет протяженность более 3 км.<br><br>Отдыхая на Большом Яровом, вы обязательно поймаете себя на
-              ощущении, что находитесь на морском побережье. Поэтому мы и зовем Яровое нашим морем! Загар здесь
-              мгновенно прилипает даже к самым белокожим людям, а его волшебный бронзовый оттенок будет радовать вас на
-              протяжении длительного времени, возвращая воспоминания о нашем ласковом солнце и «вкусном» соленом
-              воздухе.
-              <br><br>Вода в озере имеет горько-соленый вкус, в ней содержится множество минеральных солей (до 120
-              гр/л). Выходя из нее, вы почувствуете, что на коже остается тонкий, едва заметный беловатый слой соли,
-              который может работать как своеобразный пилинг. Ваше тело скажет вам «спасибо» за этот маленький рай среди
-              большой степи.</span></div>
-        </section>
-        <section class="about__video">
-          <div class="about__play-btn js-video-handler" data-video="https://www.youtube.com/embed/q76bMs-NwRk">
-            <div class="icon"><svg width="14" height="18" viewbox="0 0 14 18" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0 2.73703C0 1.13964 1.78029 0.186861 3.1094 1.07293L12.5039 7.3359C13.6913 8.12754 13.6913 9.87246 12.5038 10.6641L3.1094 16.9271C1.78029 17.8131 0 16.8604 0 15.263V2.73703Z"
-                  fill="#201f65"></path>
-              </svg></div>
-          </div>
-        </section>
-        <section class="about__image"><img src="http://placehold.it/2350x1250"></section>
-        <section class="about__description">
-          <div class="paragraph paragraph_size-md paragraph_color--main"><span>Уникальный состав лечебной воды и грязей
-              обеспечивает живущий в воде озера рачок Artemia Solina. В некоторых развитых странах из этого малюсенького
-              рачка производят чрезвычайно дорогие лекарства, один грамм которых эквивалентен килограмму золота. А
-              здесь, в Яровом, эти драгоценные микроорганизмы «работают» бесплатно, делая озеро лечебным и
-              знаменитым.<br><br>На берегу озера даже установили своеобразный памятник артемии. Именно она способствует
-              возникновению рапы – лечебного соляного раствора озера. В этой рапе содержится практически вся таблица
-              Менделеева – очень высокое содержание кремниевой кислоты, борной кислоты и брома.
-              <br><br>Благодаря концентрации соли плотность рапы настолько высокая, что на поверхности воды можно лежать
-              и читать газету. По этой же причине в озере нет рыбы. Артемия – его единственный обитатель. Отмирающие
-              рачки падают на дно и вместе с концентрированными солевыми отложениями и ещё длинным списком химических
-              веществ образуют толстый слой грязи, которая обладает целебными свойствами.</span></div>
-        </section>
-        <section class="about__slider">
-          <div class="about-slider">
-            <div class="swiper-container about-slider__top js-about-slider-top">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></div>
-                <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-10.jpg" /></div>
-              </div>
-            </div>
-            <div class="about-slider__bottom">
-              <div class="swiper-container js-about-slider-bottom" thumbsslider="">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-1.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></div>
-                  <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-10.jpg" /></div>
-                </div>
-              </div>
-              <div class="swiper-navigation">
-                <div class="swiper-prev js-about-slider-prev"><svg width="30" height="24" viewbox="0 0 32 26"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 1L2 13M2 13L14 25M2 13H32" stroke="#00AFD6" stroke-width="2"></path>
-                  </svg></div>
-                <div class="swiper-page js-about-slider-page"></div>
-                <div class="swiper-next js-about-slider-next"><svg width="30" height="24" viewbox="0 0 32 26"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 1L30 13M30 13L18 25M30 13H0" stroke="#00AFD6" stroke-width="2"></path>
-                  </svg></div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+  <div class="container">
+    <h1>О компании</h1>
   </div>
-</div>
 {% endblock %}
 
 {% block scripts %}
-<script src="/assets/js/about.js"></script>
+  <script src="/assets/js/about.js"></script>
 {% endblock %}
