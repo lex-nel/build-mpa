@@ -47,8 +47,9 @@ module.exports = function () {
             to: `${outPath}${fileName}.css`,
             map: { inline: false },
           })
-          .then(result => {
-            result.css = prettier.format(result.css, { parser: 'css' })
+          .then(async result => {
+            result.css = await prettier.format(result.css, { parser: 'css' })
+            console.log(result.css)
             fs.writeFile(`${outPath}${fileName}.css`, result.css, () => true)
             if (result.map) {
               fs.writeFile(

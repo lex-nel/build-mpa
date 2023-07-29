@@ -27,8 +27,8 @@ module.exports = function () {
     files.forEach(file => {
       const fileName = path.parse(file).name
 
-      engine.renderFile(fileName).then(html => {
-        html = prettier.format(html, {
+      engine.renderFile(fileName).then(async html => {
+        html = await prettier.format(html, {
           parser: 'html',
           singleAttributePerLine: true,
           htmlWhitespaceSensitivity: 'ignore',
