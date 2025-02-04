@@ -1,3 +1,3 @@
-export default (message: unknown) => {
+export default (message: string | undefined) => {
   console.log(message)
 }

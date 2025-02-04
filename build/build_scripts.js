@@ -38,7 +38,7 @@ module.exports = function () {
       sourcemap: true,
       minify: true,
       format: 'iife',
-      target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
+      // target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
       logLevel: 'info',
       treeShaking: true,
     })
