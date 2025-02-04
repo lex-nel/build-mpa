@@ -10,10 +10,10 @@ const tailwindcss = require('tailwindcss')
 const prettier = require('prettier')
 
 module.exports = function () {
-  fs.readFile('src/styles/index.pcss', (err, css) => {
+  fs.readFile('src/styles/index.css', (err, css) => {
     postcss([postcssImport, postcssNested, autoprefixer, tailwindcss])
       .process(css, {
-        from: 'src/styles/index.pcss',
+        from: 'src/styles/index.css',
         to: 'dist/assets/css/index.css',
         map: { inline: false },
       })

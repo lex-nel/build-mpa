@@ -1,7 +1,7 @@
 .header {
   height: 48px;
   flex-shrink: 0;
-  backdrop-filter: blur(0.5);
+  backdrop-filter: blur(8px);
   color: white;
 
   @apply flex items-center justify-center;
