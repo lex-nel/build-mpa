@@ -1,4 +1,4 @@
-@import url('card-product.css');
+@import './card-product.css';
 
 .card {
   @apply bg-white rounded shadow;

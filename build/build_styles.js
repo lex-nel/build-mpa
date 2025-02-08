@@ -2,16 +2,13 @@ const fs = require('fs')
 const path = require('path')
 
 const postcss = require('postcss')
-const postcssImport = require('postcss-import')
 const autoprefixer = require('autoprefixer')
-const postcssNested = require('postcss-nested')
-const postcssReporter = require('postcss-reporter')
-const tailwindcss = require('tailwindcss')
+const tailwindcss = require('@tailwindcss/postcss')
 const prettier = require('prettier')
 
 module.exports = function () {
   fs.readFile('src/styles/index.css', (err, css) => {
-    postcss([postcssImport, postcssNested, autoprefixer, tailwindcss])
+    postcss([tailwindcss, autoprefixer])
       .process(css, {
         from: 'src/styles/index.css',
         to: 'dist/assets/css/index.css',
@@ -41,7 +38,7 @@ module.exports = function () {
       const fileName = path.parse(file).name
 
       fs.readFile(entryPath + file, (err, css) => {
-        postcss([postcssNested, postcssImport(), autoprefixer, tailwindcss])
+        postcss([tailwindcss, autoprefixer])
           .process(css, {
             from: entryPath + file,
             to: `${outPath}${fileName}.css`,

@@ -1,13 +1,19 @@
-@import url('tailwindcss.css');
-@import url('utils/variables.css');
-@import url('components/header.css');
-@import url('components/footer.css');
-@import url('components/cards/index.css');
+@import 'tailwindcss';
+@import './utils/variables.css';
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/cards/index.css';
 
-@layer utilities {
-  .change {
-    color: transparent;
-  }
+@theme {
+  --color-primary: #201f65;
+  --color-pink: #ff3f90;
+  --color-cyan: #00afd6;
+  --color-yellow: #ffb803;
+  --color-green: #61c365;
+  --color-light-blue: #d6e9fb;
+  --color-gray: #cbcadd;
+  --color-black: #333;
+  --color-gray-second: #ccd7e8;
 }
 
 *,
