@@ -1,5 +1,5 @@
 @import './card-product.css';
 
 .card {
-  @apply bg-white rounded shadow;
+  @apply rounded bg-white shadow;
 }
