@@ -10,12 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "autoprefixer": "^10.4.20",
     "browser-sync": "^3.0.3",
-    "chokidar": "^3.6.0",
-    "esbuild": "^0.18.20",
+    "chokidar": "^4.0.3",
+    "esbuild": "^0.25.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^5.2.3",
@@ -27,7 +28,6 @@
     "stylelint-config-standard": "^37.0.0",
     "stylelint-prettier": "^5.0.3",
     "tailwindcss": "^4.0.4",
-    "@tailwindcss/postcss": "^4.0.4",
     "typescript": "^5.7.3"
   },
   "volta": {
