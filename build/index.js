@@ -1,9 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const chokidar = require('chokidar')
-
-const bs = require('browser-sync').create()
-
+const browserSync = require('browser-sync')
 const buildTemplates = require('./build_templates')
 const buildStyles = require('./build_styles')
 const buildScripts = require('./build_scripts')
@@ -14,6 +12,7 @@ const lintStyles = require('./lint_styles')
 const entryPath = path.join(__dirname, '../src/')
 const outPath = path.join(__dirname, '../dist/')
 
+const bs = browserSync.create()
 bs.init({
   open: false,
   port: 3000,
@@ -31,6 +30,7 @@ bs.init({
         const body = fs.readFileSync(`${outPath}product.html`, (err, body) => {
           return body
         })
+
         res.end(body)
       }
 
@@ -72,6 +72,11 @@ chokidar.watch(entryPath).on('change', path => {
     Promise.all([buildTemplates(), buildStyles()]).then(() => bs.reload())
   }
 
+  if (path.includes('assets')) {
+    // Копирование асетов
+    buildAssets()
+  }
+}).on('add', path => {
   if (path.includes('assets')) {
     // Копирование асетов
     buildAssets()
