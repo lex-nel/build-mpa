@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["esbuild", "pcss", "tailwindcss"]
+  "cSpell.words": [
+    "esbuild",
+    "pcss",
+    "tailwindcss"
+  ],
+  "[liquid]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
 }
