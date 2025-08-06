@@ -37,10 +37,11 @@ module.exports = function () {
       bundle: true,
       sourcemap: true,
       minify: true,
-      format: 'iife',
+      format: 'esm',
       // target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
       logLevel: 'info',
       treeShaking: true,
+      splitting: true,
     })
   }
 
