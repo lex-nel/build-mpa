@@ -1,8 +1,6 @@
 @import 'tailwindcss';
 @import './utils/variables.css';
-@import './components/header.css';
-@import './components/footer.css';
-@import './components/cards/index.css';
+@import './components/index.css';
 
 @theme {
   --color-primary: #201f65;
