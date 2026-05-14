@@ -10,5 +10,9 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "plugins": ["prettier-plugin-tailwindcss", "@shopify/prettier-plugin-liquid"]
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "@shopify/prettier-plugin-liquid",
+    "@prettier/plugin-oxc"
+  ]
 }
