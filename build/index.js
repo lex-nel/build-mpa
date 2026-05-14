@@ -47,38 +47,41 @@ buildAssets() // Копирование асетов
 
 // Запуск линтинга при первом запуске
 lintScripts() // Линтинг скриптов
-lintStyles() // Линтинг стилей
+// lintStyles() // Линтинг стилей
 
 // Запуск сборки при изменении исходных файлов
-chokidar.watch(entryPath).on('change', path => {
-  if (path.includes('scripts')) {
-    // Линтинг скриптов
-    lintScripts()
+chokidar
+  .watch(entryPath)
+  .on('change', path => {
+    if (path.includes('scripts')) {
+      // Линтинг скриптов
+      lintScripts()
 
-    // Сборка скриптов
-    buildScripts().then(() => bs.reload())
-  }
+      // Сборка скриптов
+      buildScripts().then(() => bs.reload())
+    }
 
-  if (path.includes('styles')) {
-    // Линтинг стилей
-    lintStyles()
+    if (path.includes('styles')) {
+      // Линтинг стилей
+      // lintStyles()
 
-    // Сборка стилей
-    buildStyles().then(() => bs.reload())
-  }
+      // Сборка стилей
+      buildStyles().then(() => bs.reload())
+    }
 
-  if (path.includes('templates')) {
-    // Сборка html и стилей
-    Promise.all([buildTemplates(), buildStyles()]).then(() => bs.reload())
-  }
+    if (path.includes('templates')) {
+      // Сборка html и стилей
+      Promise.all([buildTemplates(), buildStyles()]).then(() => bs.reload())
+    }
 
-  if (path.includes('assets')) {
-    // Копирование асетов
-    buildAssets()
-  }
-}).on('add', path => {
-  if (path.includes('assets')) {
-    // Копирование асетов
-    buildAssets()
-  }
-})
+    if (path.includes('assets')) {
+      // Копирование асетов
+      buildAssets()
+    }
+  })
+  .on('add', path => {
+    if (path.includes('assets')) {
+      // Копирование асетов
+      buildAssets()
+    }
+  })
